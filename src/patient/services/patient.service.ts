@@ -105,7 +105,7 @@ export class PatientService {
     }
 
     async validatePhysician(patient: Patient, @Request() req): Promise<any> {
-        return this.http.get('https://puente-solidaridad-physician.herokuapp.com/v1/physician/' + patient.treatingPhysicianId, {
+        return this.http.get('https://puente-solidaridad-physicians.herokuapp.com/v1/physician/' + patient.treatingPhysicianId, {
             headers: {
                 'Authorization': req.headers.authorization,
             }  
